@@ -17,17 +17,8 @@ The site is hosted on GitHub Pages from the `main` branch (repository root). Eve
 ## Changing prices, items or hours
 Edit `js/data.js`. Each item has a permanent `id`, which the future ordering and booking system will use, so don't rename ids once that system is live. To hide an item without deleting it, set `available: false`.
 
-## Photos to add
-Until photos are added, each spot shows a dark placeholder with the business icon. Save each photo as both `.webp` and `.jpg` with these exact names:
-
-| File | Used on | Recommended size |
-|---|---|---|
-| `assets/carwash-hero.webp` / `.jpg` | Hub quadrant, car wash hero, promo cards | 1600 × 1067 (3:2), under 300 KB |
-| `assets/kebab-hero.webp` / `.jpg` | Same, for Kababjii | 1600 × 1067 |
-| `assets/dessert-hero.webp` / `.jpg` | Same, for Dessert House | 1600 × 1067 |
-| `assets/pizza-hero.webp` / `.jpg` | Same, for Cafe & Pizzeria | 1600 × 1067 |
-
-Once they're in, uncomment the preload line in `index.html` `<head>` for each photo.
+## Photos
+Each business uses `assets/<id>-hero.webp` plus a `.jpg` fallback (carwash, kebab, dessert, pizza). They appear in the hub quadrant, the page banner and the promo cards. To replace one, overwrite both files with the same names; around 1600 px wide gives the sharpest result. If a file is missing, the page shows a tinted placeholder with the business icon.
 
 ## Still to fill in
 - `js/data.js`: in the `pizza` entry, `reviewUrl: ""`. Add the Google review link once the Cafe & Pizzeria has a Google listing; the review link appears automatically. When that listing exists, also update the pizza `geo`, `mapsUrl` and `mapsEmbedUrl`.
