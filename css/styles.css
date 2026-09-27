@@ -196,20 +196,20 @@ button { font: inherit; color: inherit; }
   }
   .quad { border-radius: 0; min-height: 0; }
   .quad__content { padding: clamp(1.25rem, 3.5vw, 3rem); }
-  .quad--carwash .quad__content { align-self: start; justify-self: start; }
-  .quad--kebab .quad__content { align-self: start; justify-self: end; text-align: right; align-items: flex-end; }
+  .quad--kebab .quad__content { align-self: start; justify-self: start; }
+  .quad--carwash .quad__content { align-self: start; justify-self: end; text-align: right; align-items: flex-end; }
   .quad--dessert .quad__content { align-self: end; justify-self: start; }
   .quad--pizza .quad__content { align-self: end; justify-self: end; text-align: right; align-items: flex-end; }
-  .quad--kebab .quad__badges, .quad--pizza .quad__badges { justify-content: flex-end; }
-  .quad--kebab .quad__enter, .quad--pizza .quad__enter { align-self: flex-end; }
-  .quad--carwash .media::after { background: linear-gradient(135deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
-  .quad--kebab .media::after { background: linear-gradient(225deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
+  .quad--carwash .quad__badges, .quad--pizza .quad__badges { justify-content: flex-end; }
+  .quad--carwash .quad__enter, .quad--pizza .quad__enter { align-self: flex-end; }
+  .quad--kebab .media::after { background: linear-gradient(135deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
+  .quad--carwash .media::after { background: linear-gradient(225deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
   .quad--dessert .media::after { background: linear-gradient(45deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
   .quad--pizza .media::after { background: linear-gradient(315deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
   .quad__name { font-size: clamp(2.2rem, 4.6vw, 4.2rem); }
 
-  .hub[data-active="carwash"] { --c1: 1.5fr; --r1: 1.5fr; }
-  .hub[data-active="kebab"]   { --c2: 1.5fr; --r1: 1.5fr; }
+  .hub[data-active="kebab"] { --c1: 1.5fr; --r1: 1.5fr; }
+  .hub[data-active="carwash"]   { --c2: 1.5fr; --r1: 1.5fr; }
   .hub[data-active="dessert"] { --c1: 1.5fr; --r2: 1.5fr; }
   .hub[data-active="pizza"]   { --c2: 1.5fr; --r2: 1.5fr; }
   .hub[data-active] .quad:not(.is-active) { filter: brightness(.35) saturate(.7); }
