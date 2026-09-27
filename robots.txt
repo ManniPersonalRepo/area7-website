@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://area7.com.au/sitemap.xml
