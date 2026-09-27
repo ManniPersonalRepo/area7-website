@@ -85,7 +85,7 @@ button { font: inherit; color: inherit; }
 /* ---------- Media (photos with graceful placeholder) ---------- */
 .media { position: absolute; inset: 0; overflow: hidden; background: var(--ink-2); }
 .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-.media::after { content: ""; position: absolute; inset: 0; background: rgba(14, 12, 11, .6); }
+.media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,12,11,.05) 30%, rgba(14,12,11,.7) 100%); }
 .media[data-icon="carwash"] img { object-position: 50% 28%; } /* keep the headlight in wide crops */
 .media__fallback { display: none; }
 .media.is-missing { background-image: var(--grain), var(--tint, radial-gradient(circle at 30% 30%, #3a2416, var(--ink) 70%)); }
@@ -158,7 +158,9 @@ button { font: inherit; color: inherit; }
   isolation: isolate; transition: filter .4s var(--ease);
 }
 .quad .media { z-index: -1; }
-.quad .media::after { background: linear-gradient(180deg, rgba(14,12,11,.45), rgba(14,12,11,.75)); }
+.quad .media::after { background: linear-gradient(180deg, rgba(14,12,11,.1) 20%, rgba(14,12,11,.72) 100%); }
+.quad__content, .hero__content, .promo-card { text-shadow: 0 1px 3px rgba(0,0,0,.65), 0 0 18px rgba(0,0,0,.45); }
+.quad__content .btn, .hero__content .btn { text-shadow: none; }
 
 .quad__content {
   align-self: end; padding: 1.25rem; max-width: 30rem;
@@ -166,7 +168,7 @@ button { font: inherit; color: inherit; }
 }
 .quad__icon { width: 2.5rem; height: 2.5rem; color: var(--cream); margin-bottom: .25rem; }
 .quad__name { font-size: clamp(2rem, 7vw, 3.4rem); }
-.quad__tagline { color: var(--cream-muted); font-weight: 500; }
+.quad__tagline { color: var(--cream); font-weight: 600; }
 
 .quad__peek { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .4s var(--ease), opacity .3s var(--ease); }
 .quad__peek-inner { overflow: hidden; display: flex; flex-direction: column; gap: .6rem; }
@@ -202,10 +204,10 @@ button { font: inherit; color: inherit; }
   .quad--pizza .quad__content { align-self: end; justify-self: end; text-align: right; align-items: flex-end; }
   .quad--carwash .quad__badges, .quad--pizza .quad__badges { justify-content: flex-end; }
   .quad--carwash .quad__enter, .quad--pizza .quad__enter { align-self: flex-end; }
-  .quad--kebab .media::after { background: linear-gradient(135deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
-  .quad--carwash .media::after { background: linear-gradient(225deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
-  .quad--dessert .media::after { background: linear-gradient(45deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
-  .quad--pizza .media::after { background: linear-gradient(315deg, rgba(14,12,11,.78), rgba(14,12,11,.5)); }
+  .quad--kebab .media::after { background: linear-gradient(135deg, rgba(14,12,11,.85) 0%, rgba(14,12,11,.45) 32%, rgba(14,12,11,0) 65%); }
+  .quad--carwash .media::after { background: linear-gradient(225deg, rgba(14,12,11,.85) 0%, rgba(14,12,11,.45) 32%, rgba(14,12,11,0) 65%); }
+  .quad--dessert .media::after { background: linear-gradient(45deg, rgba(14,12,11,.85) 0%, rgba(14,12,11,.45) 32%, rgba(14,12,11,0) 65%); }
+  .quad--pizza .media::after { background: linear-gradient(315deg, rgba(14,12,11,.85) 0%, rgba(14,12,11,.45) 32%, rgba(14,12,11,0) 65%); }
   .quad__name { font-size: clamp(2.2rem, 4.6vw, 4.2rem); }
 
   .hub[data-active="kebab"] { --c1: 1.5fr; --r1: 1.5fr; }
@@ -287,8 +289,8 @@ button { font: inherit; color: inherit; }
 .hero .media { z-index: -1; }
 .hero .media::after {
   background:
-    linear-gradient(90deg, rgba(14,12,11,.7) 0%, rgba(14,12,11,.35) 55%, rgba(14,12,11,0) 80%),
-    linear-gradient(180deg, rgba(14,12,11,.35) 0%, rgba(14,12,11,.55) 45%, var(--ink) 100%);
+    linear-gradient(90deg, rgba(14,12,11,.75) 0%, rgba(14,12,11,.4) 45%, rgba(14,12,11,0) 70%),
+    linear-gradient(180deg, rgba(14,12,11,0) 0%, rgba(14,12,11,.12) 55%, var(--ink) 100%);
 }
 .hero__content { padding-top: 5rem; padding-bottom: clamp(2rem, 6vw, 4.5rem); display: flex; flex-direction: column; gap: .9rem; }
 .eyebrow {
